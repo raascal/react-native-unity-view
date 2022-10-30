@@ -60,6 +60,7 @@
       console.log(`Successfully deleted: ${nodeModulesPath}`)
     } catch (err) {
       console.log(`Error deleting ${nodeModulesPath}: ${err.message}`);
+      console.log(`Skipping directory removal...`);
     }
   };
 
