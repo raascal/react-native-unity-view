@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="no.asmadsen.unity.view">
+<uses-feature android:name="android.hardware.sensor.compass"
+                  android:required="true" />
 
 </manifest>
