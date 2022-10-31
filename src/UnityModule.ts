@@ -7,6 +7,8 @@ export interface UnityViewMessage {
     name: string;
     data: any;
     callBack?: (data: any) => void;
+    error: string;
+    isSent: boolean;
 }
 
 export interface UnityModule {
