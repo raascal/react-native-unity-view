@@ -9,6 +9,8 @@ export default class MessageHandler {
     public seq: 'start' | 'end' | ''
     public name: string
     public data: any
+    public isSent: boolean
+    public waitId: number
 
     constructor () {
     }
@@ -24,6 +26,7 @@ export default class MessageHandler {
         handler.seq = m.seq
         handler.name = m.name
         handler.data = m.data
+        handler.waitId = m.waitId
         return handler
     }
 
@@ -36,11 +39,13 @@ export default class MessageHandler {
     }
 
     public send (data: any) {
-        UnityNativeModule.postMessage('UnityMessageManager', 'onRNMessage', UnityMessagePrefix + JSON.stringify({
+        if(!isSent){
+            UnityNativeModule.postMessage('UnityMessageManager', 'onRNMessage', UnityMessagePrefix + JSON.stringify({
             id: this.id,
             seq: 'end',
             name: this.name,
             data: data
-        }))
+            }))
+        }
     }
 }
