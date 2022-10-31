@@ -109,4 +109,6 @@
 
     const npmIgnorePath = path.resolve(__dirname, '../.npmignore');
     removeLibraryNpmIgnorePaths(npmIgnorePath, libraryNodeModulesPath);
+    
+    console.log(`Postinstaller completed`);
   })();
