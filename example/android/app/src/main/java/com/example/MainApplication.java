@@ -45,6 +45,19 @@ public class MainApplication extends Application implements ReactApplication {
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this); // Remove this line if you don't want Flipper enabled
   }
+  
+  private View.OnClickListener mCorkyListener = new View.OnClickListener() {
+        public void onClick(View v) {
+          //log to console
+         console.log("click event detected");
+          
+          //send notification
+         setContentView(R.layout.main);
+        if(getIntent().getExtras()!=null){
+            Toast.makeText(this, "Status changed", Toast.LENGTH_SHORT).show();
+        }
+        }
+    };
 
   /**
    * Loads Flipper in React Native templates.
