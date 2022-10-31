@@ -345,19 +345,30 @@ Resume the unity player.
 
 ```
 import React from 'react';
-import { StyleSheet, Image, View, Dimensions } from 'react-native';
-import UnityView from 'react-native-unity-view';
+import { Text, View, StyleSheet } from 'react-native';
 
-export default class App extends React.Component<Props, State> {
-    render() {
-    return (
-      <View style={styles.container}>
-        <UnityView style={{ position: 'absolute', left: 0, right: 0, top: 0, bottom: 0, }} /> : null}
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-      </View>
-    );
+const styles = StyleSheet.create({
+  center: {
+    alignItems: 'center'
   }
+})
+
+const Greeting = (props) => {
+  return (
+    <View style={styles.center}>
+      <Text>Hello {props.name}!</Text>
+    </View>
+  );
 }
+
+const LotsOfGreetings = () => {
+  return (
+    <View style={[styles.center, {top: 50}]}>
+      <Greeting name='Rexxar' />
+      <Greeting name='Jaina' />
+      <Greeting name='Valeera' />
+    </View>
+  );
+}
+
 ```
