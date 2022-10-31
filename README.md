@@ -11,6 +11,10 @@ to make it work with React Native >= 0.60.
 
 **This project may or may not be updated depending on the further use of it at my workplace, however feel free to fork it** 
 
+## Technologies
+![andriod](docs/android.jpg) 
+![java](docs/java.png) 
+![react](docs/react.png) 
 ## Install
 
 `yarn add @asmadsen/react-native-unity-view`
