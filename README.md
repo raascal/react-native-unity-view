@@ -300,7 +300,7 @@ void toggleRotate(string message)
 }
 ```
 
-2. Send message use javascript.
+2. Send message &use javascript.
 
 ```
 onToggleRotate() {
